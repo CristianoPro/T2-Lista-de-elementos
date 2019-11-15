@@ -1,3 +1,4 @@
+package Model;
 /**
  * 
  * @author Cristiano Souza de Oliveira
@@ -25,13 +26,10 @@ public class Ponto {
 
 	@Override
 	public boolean equals(Object o) {
-		// Polimorfismo de coercao: converte um objeto de uma classe para outra classe
 		Ponto p = (Ponto) o;
 		return this.x == p.x && this.y == p.y;
 	}
 
-	// reescrever o metodo toString da classe pai da classe Ponto
-	// pai da classe Ponto eh a classe Object
 	@Override
 	public String toString() {
 		return "(" + this.x + "," + this.y + ")";

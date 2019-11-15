@@ -1,3 +1,4 @@
+package Model;
 /**
  * 
  * @author Cristiano Souza de Oliveira
@@ -37,7 +38,7 @@ public class ListaPonto {
 			this.pontos[posicao] = x;
 			this.validos ++;
 			
-			//System.out.println(this.pontos[posicao]);
+			
 			return true;
 		}
 		return false;

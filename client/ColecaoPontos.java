@@ -1,4 +1,8 @@
+package client;
 import java.util.Scanner;
+
+import Model.ListaPonto;
+import Model.Ponto;
 
 /**
  * 
@@ -141,7 +145,13 @@ public class ColecaoPontos {
 		
 		Ponto p = new Ponto(x,y);
 		
-		System.out.println(colecao.RetornaIndex(p));
+		if(colecao.RetornaIndex(p) != -1) {
+			System.out.println("O index do Ponto = " + colecao.RetornaIndex(p));
+		}else{
+			System.out.println(colecao.RetornaIndex(p));
+		}
+		
+		
 		
 	}
 
@@ -152,9 +162,15 @@ public class ColecaoPontos {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Informe a posicao do ponto que deseja remover: ");
 		int posicao = teclado.nextInt();
-		colecao.RemoveElemento(posicao);
+		if(colecao.RemoveElemento(posicao)) {
+			System.out.println("Ponto removido!");
+			colecao.ShowPontosLista();
+		}else{
+			System.out.println("O ponto não existe!");
+			colecao.ShowPontosLista();
+		};
 		
-		colecao.ShowPontosLista();
+		
 		
 	}
 
